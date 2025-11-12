@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>診断結果 - ゴミ箱DNA診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="displayResult()">
+  <div class="container">
+    <h1>🎉 診断結果</h1>
+    
+    <div class="result-card">
+      <h2>🗑️ あなたのゴミ箱: <span id="result-type"></span></h2>
+      <h3><span id="animal-type"></span></h3>
+    </div>
+    
+    <section class="section">
+      <h3>【動物型の特性】</h3>
+      <p id="animal-description"></p>
+    </section>
+    
+    <section class="section">
+      <h3>【身体のサイン】</h3>
+      <p id="body-signs"></p>
+    </section>
+    
+    <section class="section">
+      <h3>【心理のサイン】</h3>
+      <p id="mental-signs"></p>
+    </section>
+    
+    <section class="section">
+      <h3>【3ステップのほぐし方】</h3>
+      <div id="steps-container"></div>
+    </section>
+    
+    <p id="message-text" style="font-weight:bold;text-align:center;margin:20px 0;"></p>
+    
+    <section class="feedback">
+      <h3>【フィードバック】</h3>
+      <p>この診断、当たってましたか？</p>
+      <div class="btn-group">
+        <button onclick="submitFeedback('accurate', 'yes')">当たった</button>
+        <button onclick="submitFeedback('accurate', 'maybe')">微妙</button>
+        <button onclick="submitFeedback('accurate', 'no')">外れた</button>
+      </div>
+      
+      <p>やってみて楽になりましたか？</p>
+      <div class="btn-group">
+        <button onclick="submitFeedback('helpful', 'yes')">はい</button>
+        <button onclick="submitFeedback('helpful', 'maybe')">どちらでもない</button>
+        <button onclick="submitFeedback('helpful', 'no')">いいえ</button>
+      </div>
+      
+      <textarea id="comment" placeholder="コメント (任意)"></textarea>
+      <button class="btn-submit" onclick="submitComment()">送信</button>
+    </section>
+    
+    <p class="warning">
+      🚨 注意:<br>
+      本サービスは医学的診断ではありません。痛みや症状が続く場合は、必ず医療機関を受診してください。
+    </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
