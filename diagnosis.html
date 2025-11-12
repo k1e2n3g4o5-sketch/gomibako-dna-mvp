@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>診断中 - ゴミ箱DNA診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadQuestion()">
+  <div class="container">
+    <div class="progress">質問 <span id="current-q">1</span>/7</div>
+    
+    <h2 id="question-text">質問文がここに入ります</h2>
+    
+    <div class="options" id="options"></div>
+    
+    <button class="btn-next" id="btn-next" onclick="goToNextQuestion()" disabled>次へ</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
